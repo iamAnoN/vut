@@ -1,15 +1,43 @@
 let mix = require('laravel-mix');
+let ImageminPlugin     = require('imagemin-webpack-plugin').default;
+let CopyWebpackPlugin  = require('copy-webpack-plugin');
+let imageminMozjpeg    = require('imagemin-mozjpeg');
 
-/*
- |--------------------------------------------------------------------------
- | Mix Asset Management
- |--------------------------------------------------------------------------
- |
- | Mix provides a clean, fluent API for defining some Webpack build steps
- | for your Laravel application. By default, we are compiling the Sass
- | file for the application as well as bundling up all the JS files.
- |
- */
+mix.webpackConfig({
+    plugins: [
+        //Compress images
+        new CopyWebpackPlugin([{
+            context: 'resources/assets/images',
+            from: '**/*',
+            to: 'images/'
+        }]),
+        new ImageminPlugin({
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            pngquant: {
+                quality: '65-80'
+            },
+            plugins: [
+                imageminMozjpeg({
+                    quality: 65,
+                    maxMemory: 1000 * 512
+                })
+            ]
+        })
+    ],
+});
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+if (!mix.inProduction()) {
+    mix.browserSync({
+        proxy: 'http://localhost:3000/'
+    });
+}
+
+mix.js('resources/assets/js/app.js', 'public/js/main.js')
+    // .js('resources/assets/js/login.js', 'public/js/login.js')
+    .sass('resources/assets/sass/app.scss', 'public/css/main.css')
+    .autoload({
+        jquery: ['$', 'jQuery', 'jquery', 'window.jQuery']
+    })
+    .options({
+        processCssUrls: false
+    });
