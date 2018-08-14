@@ -10,6 +10,8 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
+        <link rel="stylesheet" type="text/css" href="{{mix('/css/main.css')}}">
+
         <!-- Styles -->
 
     </head>
@@ -21,6 +23,6 @@
 
         @include('layout.footer')
 
-
+        <script src="{{mix('/js/main.js')}}" type="text/javascript"></script>
     </body>
 </html>
