@@ -2,6 +2,12 @@
     background-color: #333;
     overflow: hidden;
 
+     .logo {
+        font-size: 18px;
+        font-weight: bold;
+        color:yellow;
+      }
+
     a {
     float: left;
     display: block;
@@ -21,10 +27,9 @@
 		  color: white;
 		}
 	
-
 		.icon {
 		    display: none;
-			}	
+		}	
 	}	
 }
 
@@ -39,11 +44,17 @@
 
 		  .dropdown-content {
 		  	display: block;
+		  	a{
+		  		color:yellow;
+		  		background-color:black;
+		  	}
+		  	
 		  }
 		}
 
 		.dropdown-content {
 		    display: none;
+		    color:yellow;
 		    position: absolute;
 		    background-color: #f9f9f9;
 		    min-width: 160px;
@@ -60,7 +71,7 @@
 
 			    &:hover{
 			    	background: #ddd;
-			    	color: #fff;
+			    	color: red;
 			    }
 			}
 			

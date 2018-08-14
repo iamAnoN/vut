@@ -9,6 +9,10 @@
 // @import '~bootstrap/scss/bootstrap';
 // @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
-@import 'modules/header';
+@import 'layout/header';
 
-@import 'modules/footer';
+@import 'layout/footer';
+@import 'layout/base';
+
+@import 'module/about';
+@import 'module/contact';
