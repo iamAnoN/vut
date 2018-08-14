@@ -36,6 +36,7 @@
 .dropdown {
   float: left;
   overflow: hidden;
+  background: transparent;
 }
 
 .dropdown:hover {
@@ -86,7 +87,6 @@
   padding: 14px 16px;
   font-family: inherit;
   margin: 0;
-  background-color: #555;
   color: white;
 }
 
@@ -94,17 +94,18 @@
   overflow: hidden;
   background-color: #f1f1f1;
   padding: 20px 10px;
+  font-size: 16px;
+  color: blue;
 }
 
 .footer a {
   float: left;
-  color: black;
   text-align: center;
-  padding: 12px;
+  padding: 8px;
   text-decoration: none;
-  font-size: 18px;
-  line-height: 25px;
-  border-radius: 4px;
+  font-size: 16px;
+  line-height: 12px;
+  border-radius: 2px;
 }
 
 @media screen and (max-width: 500px) {
@@ -115,27 +116,12 @@
   }
 }
 
-.footer a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.footer a.active {
-  background-color: dodgerblue;
-  color: white;
-}
-
-.footer a .logo {
-  font-size: 25px;
-  font-weight: bold;
-}
-
-.footer-right {
+.footer .footer-right {
   float: right;
 }
 
 @media screen and (max-width: 500px) {
-  .footer-right {
+  .footer .footer-right {
     float: none;
   }
 }

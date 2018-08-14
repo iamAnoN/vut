@@ -36,6 +36,7 @@
 .dropdown {
 	    float: left;
 	    overflow: hidden;
+	    background: transparent;
 
 	    &:hover{
 		  background-color: #555;
@@ -85,7 +86,7 @@
 		    padding: 14px 16px;
 		    font-family: inherit;
 		    margin: 0;
-		    background-color: #555;
+		    // background-color: #555;
   			color: white;
 		}
 

@@ -1,10 +1,10 @@
 <header>
 	<div class="footer">
-	    <a href="#default" class="logo">CompanyLogo</a>
+	   	This is a simple footer
 		    <div class="footer-right">
-		    <a class="active" href="#home">Home</a>
-		    <a href="#contact">Contact</a>
-		    <a href="#about">About</a>
+		        <span style="-moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); display: inline-block; color: red;"> 
+		           © 
+		        </span> 2018 Pravab
 	    	</div>
 	</div>
 </header>
