@@ -16,10 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('/about', function () {
-    return view('about');
+    return view('pages/about');
 });
 
-Route::get('/contact', function(){
+Route::get('/contactus', function(){
 	// return 'pravab/@gmail.com';
 	return view('pages/contact');
 });
