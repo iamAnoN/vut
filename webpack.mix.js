@@ -28,7 +28,7 @@ mix.webpackConfig({
 
 if (!mix.inProduction()) {
     mix.browserSync({
-        proxy: 'http://localhost:3000/'
+        proxy: 'http://localhost:8000/'
     });
 }
 
